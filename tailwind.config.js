@@ -15,8 +15,11 @@ module.exports = {
       },
       fontFamily: {
         helvetica: ['Helvetica', 'Arial', 'sans-serif'],
-        'gilda-display': ['Gilda\\ Display', 'serif'],
-        'mrs-sheppards': ['Mrs\\ Sheppards', 'cursive'],
+        'gilda-display': ['"Gilda Display"', 'serif'],
+        'mrs-sheppards': ['"Mrs Sheppards"', 'cursive'],
+      },
+      lineHeight: {
+        149: '149%',
       },
     },
   },
