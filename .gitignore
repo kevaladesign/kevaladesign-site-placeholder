@@ -1,0 +1,11 @@
+# Files
+
+.DS_Store
+.env*
+!.env.example
+
+# Directories
+
+.cache/
+node_modules/
+public/
