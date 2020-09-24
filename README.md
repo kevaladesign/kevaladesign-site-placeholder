@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://www.kevaladesign.com/" target="_blank" rel="noopener noreferrer">
-    <img alt="Kevala Design Logo" src="https://github.com/kevaladesign/gatsby-ssg-template/blob/variant-with-twin/src/images/icon.png?raw=true" width="60" />
+    <img alt="Kevala Design Logo" src="https://github.com/kevaladesign/kevaladesign-site-placeholder/blob/master/src/images/icon.png?raw=true" width="60" />
   </a>
 </p>
-<h1 align="center">Gatsby SSG Template</h1>
+<h1 align="center">Kevala Design Site (Placeholder)</h1>
 
 ## Information
 
@@ -11,7 +11,7 @@
 
 ###### Travis CI
 
-[![Build Status](https://travis-ci.com/kevaladesign/gatsby-ssg-template.svg?branch=variant-with-twin)](https://travis-ci.com/kevaladesign/gatsby-ssg-template)
+[![Build Status](https://travis-ci.com/kevaladesign/kevaladesign-site-placeholder.svg?token=piPqmfQ9bwfHp8mHCKoS&branch=master)](https://travis-ci.com/kevaladesign/kevaladesign-site-placeholder)
 
 **Stack**
 
@@ -43,8 +43,8 @@ Contains additional configuration for [Twin](https://github.com/ben-rogerson/twi
 1.  **Clone Repository and Install NPM Packages**
 
     ```sh
-    git clone https://github.com/kevaladesign/gatsby-ssg-template.git
-    cd gatsby-ssg-template/
+    git clone https://github.com/kevaladesign/kevaladesign-site-placeholder.git
+    cd kevaladesign-site-placeholder/
     npm install
     ```
 
