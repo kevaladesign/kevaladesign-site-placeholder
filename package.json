@@ -24,6 +24,8 @@
     "react-helmet": "^6.1.0",
     "tailwindcss": "^1.8.10",
     "twin.macro": "^1.9.0",
+    "typeface-gilda-display": "0.0.72",
+    "typeface-mrs-sheppards": "0.0.71",
     "use-immer": "^0.4.1"
   },
   "devDependencies": {
