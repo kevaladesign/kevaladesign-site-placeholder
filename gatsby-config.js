@@ -6,17 +6,17 @@ require('dotenv').config({ path: `.env.${ACTIVE_ENV}` });
 // @note Define and Extract Website and PWA Metadata
 
 const WEBSITE_METADATA = {
-  title: `Kevala Design SSG Template`,
-  description: `Static site generator template using Gatsby`,
+  title: `Kevala Design - Website Development & Design Studio`,
+  description: `Website development and design studio challenging the status quo. We offer a full suite of services to bring ideas online, contact us today for a free quote.`,
   author: `@kevaladesign`,
-  siteUrl: process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
+  siteUrl: process.env.URL || process.env.DEPLOY_URL || `https://www.kevaladesign.com`,
 };
 
 const PWA_METADATA = {
-  short_name: `SSG Template`,
+  short_name: `Kevala Design`,
   lang: `en`,
   background_color: `#000000`,
-  theme_color: `#F3F2F1`,
+  theme_color: `#EDE2D5`,
 };
 
 const { title, description, author, siteUrl } = WEBSITE_METADATA;
@@ -52,18 +52,11 @@ module.exports = {
         theme_color,
         display: `standalone`,
         icon: `src/images/icon.png`,
-        cache_busting_mode: `none`,
+        cache_busting_mode: `query`,
         crossOrigin: `use-credentials`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-offline`,
-    //   options: {
-    //     workboxConfig: {
-    //       globPatterns: [`**/icon-path*`],
-    //     },
-    //   },
-    // },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
   ],
 };

@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-ssg-template",
+  "name": "kevaladesign-site-placeholder",
   "private": true,
-  "description": "Static site generator template using Gatsby",
+  "description": "Placeholder for business website while it is being finalized.",
   "version": "0.1.0",
   "author": "Kevala Design <kevaladesignco@gmail.com>",
   "dependencies": {
@@ -95,9 +95,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevaladesign/gatsby-ssg-template"
+    "url": "https://github.com/kevaladesign/kevaladesign-site-placeholder"
   },
   "bugs": {
-    "url": "https://github.com/kevaladesign/gatsby-ssg-template/issues"
+    "url": "https://github.com/kevaladesign/kevaladesign-site-placeholder/issues"
   }
 }
