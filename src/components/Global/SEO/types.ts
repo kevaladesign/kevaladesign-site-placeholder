@@ -1,4 +1,4 @@
-import { FixedObject } from 'gatsby-image';
+import { SEOImages } from '../../../shared/types/seo';
 
 type MetaProps =
   | { name: string; content: string; property?: undefined }
@@ -11,7 +11,7 @@ export type SEOProps = {
   title: string;
   pathname: string;
   keywords?: string[];
-  image?: FixedObject;
+  images?: SEOImages;
 };
 
 type SiteMetaData = {

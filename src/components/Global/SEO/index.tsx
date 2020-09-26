@@ -11,7 +11,7 @@ export const SEO = ({
   title,
   pathname,
   keywords = [],
-  image,
+  images,
 }: SEOProps): ReactElement => {
   const { site }: GraphQLStaticQuery = useStaticQuery(
     graphql`
@@ -82,15 +82,17 @@ export const SEO = ({
         // },
       ]
         .concat(
-          image
+          images
             ? [
                 {
                   property: `og:image`,
-                  content: `http:${image.src}`,
+                  content: `${site.siteMetadata.siteUrl.replace(`https:`, `http:`)}${
+                    images.og_image.content.src
+                  }`,
                 },
                 {
                   property: `og:image:secure_url`,
-                  content: `https:${image.src}`,
+                  content: `${site.siteMetadata.siteUrl}${images.og_image.content.src}`,
                 },
                 {
                   property: `og:image:type`,
@@ -102,11 +104,15 @@ export const SEO = ({
                 },
                 {
                   property: `og:image:width`,
-                  content: `${image.width}`.replace(`$`, ``),
+                  content: `${images.og_image.content.width}`,
                 },
                 {
                   property: `og:image:height`,
-                  content: `$${image.height}`.replace(`$`, ``),
+                  content: `${images.og_image.content.height}`,
+                },
+                {
+                  name: `twitter:image`,
+                  content: `${site.siteMetadata.siteUrl}${images.twitter_image.content.src}`,
                 },
                 {
                   name: `twitter:card`,
@@ -119,7 +125,7 @@ export const SEO = ({
           keywords && keywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`,`),
+                content: keywords.join(`, `),
               }
             : []
         )

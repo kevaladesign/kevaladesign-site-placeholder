@@ -7,7 +7,7 @@ require('dotenv').config({ path: `.env.${ACTIVE_ENV}` });
 
 const WEBSITE_METADATA = {
   title: `Kevala Design - Website Development & Design Studio`,
-  description: `Website development and design studio challenging the status quo. We offer a full suite of services to bring ideas online, contact us today for a free quote.`,
+  description: `Website development and design studio based in Arizona. We offer custom online experiences like no other.`,
   author: `@kevaladesign`,
   siteUrl: process.env.URL || process.env.DEPLOY_URL || `https://www.kevaladesign.com`,
 };
@@ -54,6 +54,22 @@ module.exports = {
         icon: `src/images/icon.png`,
         cache_busting_mode: `none`,
         crossOrigin: `use-credentials`,
+      },
+    },
+    `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap.xml`,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
       },
     },
     // {
