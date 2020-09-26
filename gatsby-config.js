@@ -52,11 +52,19 @@ module.exports = {
         theme_color,
         display: `standalone`,
         icon: `src/images/icon.png`,
-        cache_busting_mode: `query`,
+        cache_busting_mode: `none`,
         crossOrigin: `use-credentials`,
       },
     },
-    `gatsby-plugin-offline`,
+    // {
+    //   resolve: `gatsby-plugin-offline`,
+    //   options: {
+    //     workboxConfig: {
+    //       globPatterns: [`**/icon*`],
+    //     },
+    //   },
+    // },
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-emotion`,
   ],
 };
